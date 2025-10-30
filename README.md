@@ -20,3 +20,7 @@ or
 ros2 launch armando_controller armando_gazebo.launch.py control_type:=trajectory
 ```
 After starting the simulation, wait 40–60 seconds until the joints begin to move.
+In first terminal
+```bash
+rqt_graph
+```
