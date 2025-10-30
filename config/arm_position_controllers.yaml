@@ -1,0 +1,54 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+position_controller:
+  ros__parameters:
+    joints:
+      - j0
+      - j1
+      - j2
+      - j3
+    command_interfaces:
+      - position
+    gains:
+      j0: {p: 1000.0, i: 0.01, d: 10.0}
+      j1: {p: 1000.0, i: 0.01, d: 10.0}
+      j2: {p: 1000.0, i: 0.01, d: 10.0}
+      j3: {p: 1000.0, i: 0.01, d: 10.0}
+
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - j0
+      - j1
+      - j2
+      - j3
+    interface_name: position
+    state_interfaces:
+      - position
+      - velocity
+    command_interfaces:
+      - position
+    allow_partial_joints_goal: false
+    constraints:
+      goal_time: 0.5
+      stopped_velocity_tolerance: 0.1
+      velocity: 10.0
+    gains:
+      j0: {p: 1000.0, i: 0.01, d: 50.0}
+      j1: {p: 1000.0, i: 0.01, d: 50.0}
+      j2: {p: 1000.0, i: 0.01, d: 50.0}
+      j3: {p: 1000.0, i: 0.01, d: 50.0}
