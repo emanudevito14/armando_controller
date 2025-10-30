@@ -39,7 +39,7 @@
           <geometry>
               <box size="0.025 0.055 0.025"/>
           </geometry>
-          <material name="black"/>
+          <material name="blu"/>
       </visual>
   </link>
   <joint name="base_1_2" type="fixed">
