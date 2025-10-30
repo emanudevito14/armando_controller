@@ -1,9 +1,9 @@
-In ros2_ws/src
+Open terminal in ros2_ws/src
 ```bash
 git clone https://github.com/emanudevito14/armando_controller.git
 ```
 
-In ros2_ws, open a terminal and build the package:
+In ros2_ws, build the package:
 ```bash
 colcon build --packages-select armando_controller
 ```
