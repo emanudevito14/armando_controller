@@ -1,6 +1,6 @@
 In ros2_ws/src
 ```bash
-git clone https://github.com/emanudevito14/armando_description.git
+git clone https://github.com/emanudevito14/armando_controller.git
 ```
 
 In ros2_ws, open a terminal and build the package:
